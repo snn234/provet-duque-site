@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Provet Duque | Pet shop no Marco, Belém-PA · O shopping do seu Pet</title>
+  <meta name="description" content="Pet shop no bairro do Marco, em Belém-PA: rações, acessórios e tudo para cães, gatos, pássaros e pequenos animais. Av. Duque de Caxias, 1189. Segunda a sábado, das 8h às 20h.">
+  <!-- PRÉVIA: remover a linha abaixo quando o site for lançado oficialmente -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0b4a12">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Provet Duque">
+  <meta property="og:title" content="Provet Duque | O shopping do seu Pet em Belém">
+  <meta property="og:description" content="Tudo para cães, gatos, pássaros e pequenos animais no Marco, Belém-PA. Segunda a sábado, das 8h às 20h.">
+  <!-- trocar por endereço completo (https://...) quando houver domínio definitivo -->
+  <meta property="og:image" content="assets/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preload" href="fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/pets.webp" as="image" type="image/webp">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="secoes.css">
+  <link rel="stylesheet" href="animacoes.css">
+  <script>document.documentElement.classList.add("js")</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PetStore",
+    "name": "Provet Duque",
+    "slogan": "O shopping do seu Pet",
+    "telephone": "+55 91 98646-1111",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Duque de Caxias, 1189 - Marco",
+      "addressLocality": "Belém",
+      "addressRegion": "PA",
+      "postalCode": "66093-029",
+      "addressCountry": "BR"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "08:00",
+      "closes": "20:00"
+    }]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#loja">Pular para os produtos</a>
+  <div class="progress" aria-hidden="true"></div>
+
+  <!-- Ícones e padrões reutilizados -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <pattern id="kibble" width="26" height="26" patternUnits="userSpaceOnUse">
+        <rect width="26" height="26" fill="#6a3d12"/>
+        <rect x="2" y="3" width="9" height="8" rx="3" fill="#b06f2c" transform="rotate(20 6 7)"/>
+        <rect x="14" y="1" width="8" height="8" rx="3" fill="#c98b40" transform="rotate(-25 18 5)"/>
+        <rect x="15" y="14" width="9" height="8" rx="3" fill="#9a5f22" transform="rotate(35 19 18)"/>
+        <rect x="3" y="15" width="8" height="8" rx="3" fill="#d59a4d" transform="rotate(-10 7 19)"/>
+        <rect x="9" y="9" width="7" height="6" rx="2.5" fill="#85501b"/>
+      </pattern>
+      <g id="paw">
+        <ellipse cx="20" cy="42" rx="9" ry="13" transform="rotate(-22 20 42)"/>
+        <ellipse cx="38" cy="22" rx="9.5" ry="13"/>
+        <ellipse cx="62" cy="22" rx="9.5" ry="13"/>
+        <ellipse cx="80" cy="42" rx="9" ry="13" transform="rotate(22 80 42)"/>
+        <path d="M50 46c-15 0-27 13-27 26 0 10 7 15 15 15 4 0 8-2 12-2s8 2 12 2c8 0 15-5 15-15 0-13-12-26-27-26z"/>
+      </g>
+      <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.5-.3z"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 3h3.5l1.7 4.3-2.2 1.4a11 11 0 0 0 5.3 5.3l1.4-2.2L19 13.5V17a2 2 0 0 1-2 2A15 15 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.7-5.4 4.8 1.6 7L12 17.3 5.8 21l1.6-7L2 9.3l7.1-.7z"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="inicio">
+    <div class="hero-in">
+
+      <header class="nav">
+        <a class="logo" href="#inicio" aria-label="Provet Duque, início">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <ellipse cx="14" cy="28" rx="7" ry="9.5" transform="rotate(-20 14 28)"/>
+            <ellipse cx="27" cy="16" rx="7" ry="10"/>
+            <ellipse cx="41" cy="16" rx="7" ry="10"/>
+            <ellipse cx="53" cy="28" rx="7" ry="9.5" transform="rotate(20 53 28)"/>
+            <path d="M33.5 30c-9 0-18 9-18 17 0 6 5 9 10 9 3 0 5-1.5 8-1.5s5 1.5 8 1.5c5 0 10-3 10-9 0-8-9-17-18-17z"/>
+          </svg>
+          <span>Provet Duque</span>
+        </a>
+
+        <nav class="menu" aria-label="Principal">
+          <a href="#inicio" class="active" aria-current="page">Início</a>
+          <a href="#loja">Loja</a>
+          <a href="#avaliacoes">Avaliações</a>
+          <a href="#contato">Contato</a>
+        </nav>
+
+        <div class="actions">
+          <a class="wa-pill" href="https://wa.me/5591986461111" data-wa="Olá! Vim pelo site da Provet Duque e gostaria de mais informações." target="_blank" rel="noopener">
+            <svg aria-hidden="true"><use href="#i-wa"/></svg><span>Fale conosco</span>
+          </a>
+        </div>
+      </header>
+
+      <svg class="deco d1" data-speed="0.1" viewBox="0 0 100 100" aria-hidden="true"><use href="#paw"/></svg>
+      <svg class="deco d2" data-speed="-0.08" viewBox="0 0 100 100" aria-hidden="true"><use href="#paw"/></svg>
+      <svg class="deco d3" data-speed="0.14" viewBox="0 0 100 100" aria-hidden="true"><use href="#paw"/></svg>
+
+      <p class="eyebrow">O shopping do seu Pet · Belém-PA</p>
+      <h1><span class="ln"><span>Tudo o que</span></span><span class="ln"><span>seu Pet ama</span></span></h1>
+
+      <img class="pets" src="assets/pets.webp" width="1552" height="1013" fetchpriority="high" alt="Um dachshund, um golden retriever e um gato espiando por cima da borda">
+
+      <div class="stats">
+        <div class="box light">
+          <div class="num-row">
+            <svg class="clock" aria-hidden="true"><use href="#i-clock"/></svg>
+            <strong>8h às 20h</strong>
+          </div>
+          <p>De segunda a sábado, no Marco</p>
+        </div>
+
+        <div class="box dark">
+          <p class="cta-title">Tudo para<br>seu Pet</p>
+          <a class="cta" href="#loja">
+            <span>Ver produtos</span>
+            <span class="cta-ico" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+          </a>
+        </div>
+
+        <div class="box light">
+          <div class="num-row">
+            <strong><span data-count="4.8" data-dec="1">4,8</span></strong>
+            <svg class="star" aria-hidden="true"><use href="#i-star"/></svg>
+          </div>
+          <p>478 avaliações no Google</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="layers">
+
+    <!-- ================= ATENDIMENTO (faixa amarela) ================= -->
+    <section class="layer l-yellow" id="atendimento" aria-labelledby="t-atend"><div class="layer-in"><div class="promo yellow">
+      <div class="promo-text">
+        <span class="eyebrow-s">Atendimento de verdade</span>
+        <h2 id="t-atend">Cada visita,<br><em>uma festa</em></h2>
+        <p>Muita variedade de produtos pet, atendimento atencioso e um espaço pensado para você e o seu melhor amigo.</p>
+        <ul class="perks">
+          <li><span aria-hidden="true">🛍️</span> Muita variedade</li>
+          <li><span aria-hidden="true">📍</span> Fácil de chegar</li>
+          <li><span aria-hidden="true">🚗</span> Estacionamento</li>
+          <li><span aria-hidden="true">☕</span> Cafezinho para você</li>
+        </ul>
+        <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=Provet%20Duque%2C%20Av.%20Duque%20de%20Caxias%2C%201189%2C%20Marco%2C%20Bel%C3%A9m%20-%20PA" target="_blank" rel="noopener">Como chegar <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="art" aria-hidden="true">
+        <span class="sticker">Nota<br>4,8 ★</span>
+        <svg class="paw p1" data-speed="-0.08" viewBox="0 0 100 100"><use href="#paw" fill="url(#kibble)"/></svg>
+        <svg class="paw p2" data-speed="0.07" viewBox="0 0 100 100"><use href="#paw" fill="url(#kibble)"/></svg>
+        <svg class="paw p3" data-speed="-0.05" viewBox="0 0 100 100"><use href="#paw" fill="url(#kibble)"/></svg>
+        <div class="dog-face" data-speed="0.05"></div>
+      </div>
+    </div></div></section>
+
+    <!-- ================= ALIMENTAÇÃO (faixa verde) ================= -->
+    <section class="layer l-green" id="alimentacao" aria-labelledby="t-racao"><div class="layer-in"><div class="promo green">
+      <div class="promo-text">
+        <span class="tag">Alimentação</span>
+        <h2 id="t-racao">A ração certa<br>para o seu pet.</h2>
+        <p>Rações para cães e gatos de todas as idades e portes. Fale com a gente pelo WhatsApp e descubra a melhor opção para o seu amigo.</p>
+        <div class="btns">
+          <a class="btn solid" href="https://wa.me/5591986461111" data-wa="Olá! Quero ajuda para escolher uma ração para o meu pet." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg> Pedir pelo WhatsApp</a>
+          <a class="btn ghost" href="#loja">Ver produtos</a>
+        </div>
+      </div>
+
+      <div class="art" aria-hidden="true">
+        <span class="blob b1" data-speed="0.09"></span><span class="blob b2"></span>
+        <span class="burst"><i>linha</i><b>Premium</b></span>
+        <div class="slot dog-slot" data-slot="foto-cachorro-oferta"><svg viewBox="0 0 100 100"><use href="#paw"/></svg><img src="assets/beagle.webp" width="800" height="1038" loading="lazy" alt=""></div>
+        <img class="bag bag-big" src="assets/racao-lunch-dog.webp" width="480" height="623" loading="lazy" alt="">
+        <svg class="bowl" viewBox="0 0 220 130">
+          <path d="M20 62c10-40 50-56 90-56s80 16 90 56z" fill="url(#kibble)"/>
+          <path d="M6 60h208c0 40-34 66-104 66S6 100 6 60z" fill="#2fb36e"/>
+          <path d="M6 60h208c0 6-1 11-3 16H9c-2-5-3-10-3-16z" fill="#47c985"/>
+        </svg>
+      </div>
+    </div></div></section>
+
+    <!-- ================= LOJA =================
+         Imagens reservadas: cada <div class="slot"> é um espaço para foto.
+         Para preencher: <img src="assets/nome.webp" width="..." height="..." loading="lazy" alt="descrição"> dentro do slot.
+         Sem preços por enquanto; os botões levam ao WhatsApp com o nome do produto. -->
+    <section class="layer l-shop" id="loja" aria-labelledby="t-pet">
+      <div class="layer-in"><div class="shop-card">
+
+        <div class="sec-head">
+          <div>
+            <span class="eyebrow-s dark">Nossa loja</span>
+            <h2 id="t-pet"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#paw"/></svg> Compre por Pet</h2>
+            <p class="sec-sub">Encontre os produtos certos para os seus companheiros peludos.</p>
+          </div>
+        </div>
+
+        <div class="cats">
+          <a class="cat-card" href="https://wa.me/5591986461111" data-wa="Olá! Quero ver produtos para cães." target="_blank" rel="noopener" style="--tint:#fdf0d4">
+            <span class="cat-badge" aria-hidden="true">🦴</span>
+            <div class="slot" data-slot="foto-cachorros"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#paw"/></svg></div>
+            <h3>Cães</h3>
+            <span class="go-link">Ver produtos →</span>
+          </a>
+          <a class="cat-card" href="https://wa.me/5591986461111" data-wa="Olá! Quero ver produtos para gatos." target="_blank" rel="noopener" style="--tint:#e2f3ea">
+            <span class="cat-badge" aria-hidden="true">🐱</span>
+            <div class="slot" data-slot="foto-gatos"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#paw"/></svg></div>
+            <h3>Gatos</h3>
+            <span class="go-link">Ver produtos →</span>
+          </a>
+          <a class="cat-card" href="https://wa.me/5591986461111" data-wa="Olá! Quero ver produtos para pequenos animais." target="_blank" rel="noopener" style="--tint:#fde3dc">
+            <span class="cat-badge" aria-hidden="true">🥕</span>
+            <div class="slot" data-slot="foto-pequenos"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#paw"/></svg></div>
+            <h3>Pequenos animais</h3>
+            <span class="go-link">Ver produtos →</span>
+          </a>
+          <a class="cat-card" href="https://wa.me/5591986461111" data-wa="Olá! Quero ver produtos para pássaros." target="_blank" rel="noopener" style="--tint:#e6f2da">
+            <span class="cat-badge" aria-hidden="true">🍃</span>
+            <div class="slot" data-slot="foto-passaros"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#paw"/></svg></div>
+            <h3>Pássaros</h3>
+            <span class="go-link">Ver produtos →</span>
+          </a>
+          <a class="cat-card" href="https://wa.me/5591986461111" data-wa="Olá! Quero ver os itens essenciais para pets." target="_blank" rel="noopener" style="--tint:#e1efe3">
+            <span class="cat-badge" aria-hidden="true">🏠</span>
+            <div class="slot" data-slot="foto-essenciais"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#paw"/></svg></div>
+            <h3>Essenciais</h3>
+            <span class="go-link">Ver produtos →</span>
+          </a>
+        </div>
+
+        <div class="sec-head feat-head">
+          <h2 id="t-dest"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#paw"/></svg> Produtos em destaque</h2>
+          <a class="see-all" href="https://wa.me/5591986461111" data-wa="Olá! Quero conhecer os produtos da loja." target="_blank" rel="noopener">Ver mais no WhatsApp →</a>
+        </div>
+
+        <div class="products">
+          <article class="product-card">
+            <span class="pbadge">Mais vendido</span>
+            <button class="heart" type="button" aria-label="Favoritar Caminha Felpuda" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></button>
+            <div class="slot" data-slot="foto-produto-1"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#paw"/></svg></div>
+            <div class="pbody">
+              <h3 class="pname">Caminha Felpuda</h3>
+              <p class="pdesc">Macia e aconchegante para o descanso do seu pet.</p>
+              <a class="add" href="https://wa.me/5591986461111" data-wa="Olá! Tenho interesse em: Caminha Felpuda." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg> Pedir<span class="hide-sm">no WhatsApp</span></a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <span class="pbadge">Destaque</span>
+            <button class="heart" type="button" aria-label="Favoritar Ração Premium para Cães" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></button>
+            <div class="slot" data-slot="foto-produto-2"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#paw"/></svg></div>
+            <div class="pbody">
+              <h3 class="pname">Ração Premium para Cães</h3>
+              <p class="pdesc">Nutrição completa para todas as fases da vida.</p>
+              <a class="add" href="https://wa.me/5591986461111" data-wa="Olá! Tenho interesse em: Ração Premium para Cães." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg> Pedir<span class="hide-sm">no WhatsApp</span></a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <button class="heart" type="button" aria-label="Favoritar Brinquedo Dino de Pelúcia" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></button>
+            <div class="slot" data-slot="foto-produto-3"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#paw"/></svg></div>
+            <div class="pbody">
+              <h3 class="pname">Brinquedo Dino de Pelúcia</h3>
+              <p class="pdesc">Diversão garantida para brincar e morder.</p>
+              <a class="add" href="https://wa.me/5591986461111" data-wa="Olá! Tenho interesse em: Brinquedo Dino de Pelúcia." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg> Pedir<span class="hide-sm">no WhatsApp</span></a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <span class="pbadge new">Novo</span>
+            <button class="heart" type="button" aria-label="Favoritar Shampoo de Aveia" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></button>
+            <div class="slot" data-slot="foto-produto-4"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#paw"/></svg></div>
+            <div class="pbody">
+              <h3 class="pname">Shampoo de Aveia</h3>
+              <p class="pdesc">Limpeza suave para peles sensíveis.</p>
+              <a class="add" href="https://wa.me/5591986461111" data-wa="Olá! Tenho interesse em: Shampoo de Aveia." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg> Pedir<span class="hide-sm">no WhatsApp</span></a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <button class="heart" type="button" aria-label="Favoritar Arranhador para Gatos" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></button>
+            <div class="slot" data-slot="foto-produto-5"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#paw"/></svg></div>
+            <div class="pbody">
+              <h3 class="pname">Arranhador para Gatos</h3>
+              <p class="pdesc">Protege seus móveis e diverte o seu gato.</p>
+              <a class="add" href="https://wa.me/5591986461111" data-wa="Olá! Tenho interesse em: Arranhador para Gatos." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg> Pedir<span class="hide-sm">no WhatsApp</span></a>
+            </div>
+          </article>
+        </div>
+
+      </div></div>
+    </section>
+
+    <!-- ================= AVALIAÇÕES (Google) ================= -->
+    <section class="layer l-reviews" id="avaliacoes" aria-labelledby="t-aval">
+      <div class="layer-in"><div class="reviews">
+        <div class="rv-summary">
+          <span class="eyebrow-s">Avaliações</span>
+          <h2 id="t-aval">Quem visita, recomenda</h2>
+          <div class="rv-score">
+            <strong>4,8</strong>
+            <div>
+              <span class="rv-stars" role="img" aria-label="4,8 de 5 estrelas">★★★★★</span>
+              <span class="rv-count">478 avaliações no Google</span>
+            </div>
+          </div>
+          <a class="btn-outline" href="https://www.google.com/maps/search/?api=1&amp;query=Provet%20Duque%2C%20Av.%20Duque%20de%20Caxias%2C%201189%2C%20Marco%2C%20Bel%C3%A9m%20-%20PA" target="_blank" rel="noopener">Ver no Google <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+
+        <div class="rv-list">
+          <figure class="rv-card">
+            <span class="rv-stars" aria-hidden="true">★★★★★</span>
+            <blockquote>“Loja muito boa, muita variedade de produtos pet, atendimento excelente.”</blockquote>
+            <figcaption>Cliente no Google</figcaption>
+          </figure>
+          <figure class="rv-card">
+            <span class="rv-stars" aria-hidden="true">★★★★★</span>
+            <blockquote>“Ótimo atendimento, local de fácil localização e um ótimo estacionamento.”</blockquote>
+            <figcaption>Cliente no Google</figcaption>
+          </figure>
+          <figure class="rv-card">
+            <span class="rv-stars" aria-hidden="true">★★★★★</span>
+            <blockquote>“Ofereceram café, água, suco e cappuccino.”</blockquote>
+            <figcaption>Cliente no Google</figcaption>
+          </figure>
+        </div>
+      </div></div>
+    </section>
+
+    <!-- ================= CONTATO ================= -->
+    <section class="layer l-contact" id="contato" aria-labelledby="t-contato">
+      <div class="layer-in"><div class="contact">
+        <div class="ct-info">
+          <span class="eyebrow-s light">Contato</span>
+          <h2 id="t-contato">Venha nos visitar</h2>
+          <ul class="ct-list">
+            <li>
+              <span class="ct-ico"><svg aria-hidden="true"><use href="#i-pin"/></svg></span>
+              <div>
+                <strong>Endereço</strong>
+                <address>Av. Duque de Caxias, nº 1189, Marco<br>entre Timbó e Vileta · Belém-PA · CEP 66093-029</address>
+                <a href="https://www.google.com/maps/search/?api=1&amp;query=Provet%20Duque%2C%20Av.%20Duque%20de%20Caxias%2C%201189%2C%20Marco%2C%20Bel%C3%A9m%20-%20PA" target="_blank" rel="noopener">Como chegar →</a>
+              </div>
+            </li>
+            <li>
+              <span class="ct-ico"><svg aria-hidden="true"><use href="#i-clock"/></svg></span>
+              <div>
+                <strong>Horário</strong>
+                <p>Segunda a sábado, das 8h às 20h</p>
+              </div>
+            </li>
+            <li>
+              <span class="ct-ico"><svg aria-hidden="true"><use href="#i-phone"/></svg></span>
+              <div>
+                <strong>Telefone e WhatsApp</strong>
+                <p><a href="tel:+5591986461111">(91) 98646-1111</a></p>
+              </div>
+            </li>
+          </ul>
+          <a class="btn-wa" href="https://wa.me/5591986461111" data-wa="Olá! Vim pelo site da Provet Duque e gostaria de mais informações." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg> Chamar no WhatsApp</a>
+        </div>
+
+        <div class="ct-map">
+          <iframe title="Mapa: Provet Duque, Av. Duque de Caxias, 1189, Marco, Belém-PA" src="https://www.google.com/maps?q=Provet%20Duque%2C%20Av.%20Duque%20de%20Caxias%2C%201189%20-%20Marco%2C%20Bel%C3%A9m%20-%20PA%2C%2066093-029&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div></div>
+
+      <footer class="footer">
+        <div class="layer-in ft-in">
+          <a class="logo ft-logo" href="#inicio" aria-label="Provet Duque, voltar ao início">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><use href="#paw" transform="scale(.64)"/></svg>
+            <span>Provet Duque</span>
+          </a>
+          <p>O shopping do seu Pet · Belém-PA</p>
+          <nav aria-label="Rodapé">
+            <a href="#loja">Loja</a>
+            <a href="#avaliacoes">Avaliações</a>
+            <a href="#contato">Contato</a>
+          </nav>
+          <small>© 2026 Provet Duque. Todos os direitos reservados.</small>
+        </div>
+      </footer>
+    </section>
+  </div>
+
+  <a class="wa-float" href="https://wa.me/5591986461111" data-wa="Olá! Vim pelo site da Provet Duque e gostaria de mais informações." target="_blank" rel="noopener" aria-label="Falar com a Provet Duque no WhatsApp">
+    <svg aria-hidden="true"><use href="#i-wa"/></svg>
+  </a>
+
+  <script src="app.js"></script>
+</body>
+</html>
