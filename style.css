@@ -44,7 +44,7 @@ body {
 
 /* foco visível para navegação por teclado */
 :focus-visible { outline: 3px solid var(--green-dark); outline-offset: 3px; box-shadow: 0 0 0 6px #fff; border-radius: 6px; }
-.l-green :focus-visible, .l-contact :focus-visible, .box.dark :focus-visible { outline-color: #ffc72c; box-shadow: none; }
+.l-green :focus-visible, .l-contact :focus-visible { outline-color: #ffc72c; box-shadow: none; }
 
 .skip {
   position: absolute; left: 12px; top: -60px; z-index: 100; padding: 10px 16px; border-radius: 10px;
@@ -128,7 +128,7 @@ h1 {
 }
 .box { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 3cqw 40px; }
 .box.light { background: var(--green-light); }
-.box.dark { background: var(--green-dark); color: var(--white); }
+.box.dark { background: var(--green-light); color: var(--green-dark); }
 .box.light p { color: var(--green-text); font-size: max(15px, 1.35cqw); line-height: 1.3; margin-top: 1.1cqw; max-width: 22cqw; }
 /* as caixas claras vão até a borda da tela */
 .box.light:first-child::before, .box.light:last-child::after {
