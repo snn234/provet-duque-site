@@ -148,10 +148,11 @@
 
 .feat-head { margin-top: clamp(32px, 4.5cqw, 58px); }
 
-.products { margin-top: clamp(18px, 2.2cqw, 28px); display: grid; grid-template-columns: repeat(5, 1fr); gap: clamp(10px, 1.5cqw, 18px); }
+.products { margin-top: clamp(18px, 2.2cqw, 28px); display: grid; grid-template-columns: repeat(6, 1fr); gap: clamp(10px, 1.5cqw, 18px); }
 .product-card { position: relative; background: #fff; border: 1px solid #dfeadf; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; transition: box-shadow .25s, transform .25s; }
 .product-card:hover { box-shadow: 0 16px 32px rgba(11,74,18,.14); transform: translateY(-4px); }
-.product-card .slot { aspect-ratio: 1 / .85; background: #eaf3ea; }
+.product-card .slot { aspect-ratio: 1; background: #eaf3ea; }
+.product-card .slot img { object-fit: cover; }
 .pbadge { position: absolute; z-index: 2; top: 10px; left: 10px; padding: 4px 10px; border-radius: 99px; font-size: 12px; font-weight: 600; color: #fff; background: var(--orange-btn); }
 .pbadge.new { background: var(--wa); }
 .heart { position: absolute; z-index: 2; top: 6px; right: 6px; width: 44px; height: 44px; border-radius: 50%; background: #fff; display: grid; place-items: center; box-shadow: 0 2px 6px rgba(0,0,0,.1); transition: transform .15s; }
@@ -160,6 +161,7 @@
 .heart[aria-pressed="true"] svg { fill: #ef4444; stroke: #ef4444; }
 .pbody { padding: 14px 14px 16px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
 .pname { font-size: 16px; font-weight: 600; line-height: 1.25; }
+.products .pbody { padding: 12px 12px 14px; }
 .pdesc { font-size: 14px; line-height: 1.4; color: var(--green-text); margin-bottom: 10px; }
 .add {
   margin-top: auto; display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0 12px; border-radius: 99px;
