@@ -61,6 +61,10 @@
 @keyframes wa-shake { 0%, 88%, 100% { rotate: 0deg; } 91% { rotate: -14deg; } 94% { rotate: 12deg; } 97% { rotate: -8deg; } }
 .wa-float { animation: wa-in .6s 1.6s cubic-bezier(.3,1.5,.5,1) backwards, wa-shake 9s 4s infinite; }
 
+/* animais recortados dentro dos círculos das categorias */
+.cat-card .slot img { object-fit: contain; transition: transform .35s cubic-bezier(.3,1.4,.5,1); filter: drop-shadow(0 6px 8px rgba(11,74,18,.22)); }
+.cat-card:hover .slot img { transform: scale(1.08) translateY(-2px); }
+
 /* último cartão da vitrine: convite para ver mais produtos */
 .more-card {
   align-items: center; justify-content: center; gap: 16px; min-height: 100%;
