@@ -47,7 +47,7 @@
 
     var grupos = new Map();
     document.querySelectorAll(
-      ".promo-text > *, .perks li, .sec-head, .cat-card, .product-card, .rv-summary > *, .rv-card, .ct-info > *, .ct-map"
+      ".promo-text > *, .perks li, .sec-head, .cat-card, .product-card, .rv-summary > *, .rv-card, .ct-info > *:not(.ct-list), .ct-list li, .ct-map"
     ).forEach(function (el) {
       var pai = el.parentElement, i = grupos.get(pai) || 0;
       grupos.set(pai, i + 1);

@@ -1,0 +1,84 @@
+/* Detalhes extras de animação (sem texto novo) — Provet Duque */
+
+/* patinhas que sobem devagar no fundo da hero */
+.spark { position: absolute; z-index: 0; bottom: 14cqw; width: 2.4cqw; fill: #b9e8bf; opacity: 0; pointer-events: none; animation: spark-up 9s ease-in infinite; }
+.s1 { left: 9cqw;  animation-delay: 1.2s; }
+.s2 { left: 24cqw; width: 1.8cqw; animation-delay: 3.8s; animation-duration: 11s; }
+.s3 { left: 66cqw; width: 2.8cqw; animation-delay: 2.4s; animation-duration: 10s; }
+.s4 { left: 82cqw; width: 2cqw;   animation-delay: 5.6s; }
+.s5 { left: 93cqw; width: 1.6cqw; animation-delay: 7.2s; animation-duration: 12s; }
+@keyframes spark-up {
+  0%   { opacity: 0;   transform: translateY(0) rotate(-12deg); }
+  15%  { opacity: .85; }
+  80%  { opacity: .5; }
+  100% { opacity: 0;   transform: translateY(-34cqw) rotate(14deg); }
+}
+
+/* pets acompanham o mouse de leve (extras.js define --mx e --my) */
+.pets { transform: translate3d(calc(var(--mx, 0) * 1px), calc(var(--my, 0) * 1px), 0); transition: transform .5s cubic-bezier(.2,.8,.2,1); }
+
+/* faixa de patinhas que corre no topo da loja */
+.paw-band { height: 54px; overflow: hidden; background: #f1fbf1; border-bottom: 1px solid #e2f3e4; }
+.paw-track {
+  height: 100%; width: 100%;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='54' viewBox='0 0 120 54'%3E%3Cg fill='%23b9e8bf'%3E%3Cg transform='translate(14 12) scale(.3) rotate(-14 50 50)'%3E%3Cellipse cx='20' cy='42' rx='9' ry='13' transform='rotate(-22 20 42)'/%3E%3Cellipse cx='38' cy='22' rx='9.5' ry='13'/%3E%3Cellipse cx='62' cy='22' rx='9.5' ry='13'/%3E%3Cellipse cx='80' cy='42' rx='9' ry='13' transform='rotate(22 80 42)'/%3E%3Cpath d='M50 46c-15 0-27 13-27 26 0 10 7 15 15 15 4 0 8-2 12-2s8 2 12 2c8 0 15-5 15-15 0-13-12-26-27-26z'/%3E%3C/g%3E%3Cg transform='translate(74 8) scale(.22) rotate(12 50 50)' opacity='.7'%3E%3Cellipse cx='20' cy='42' rx='9' ry='13' transform='rotate(-22 20 42)'/%3E%3Cellipse cx='38' cy='22' rx='9.5' ry='13'/%3E%3Cellipse cx='62' cy='22' rx='9.5' ry='13'/%3E%3Cellipse cx='80' cy='42' rx='9' ry='13' transform='rotate(22 80 42)'/%3E%3Cpath d='M50 46c-15 0-27 13-27 26 0 10 7 15 15 15 4 0 8-2 12-2s8 2 12 2c8 0 15-5 15-15 0-13-12-26-27-26z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") 0 0 / 120px 54px repeat-x;
+  animation: band-run 22s linear infinite;
+}
+@keyframes band-run { to { background-position-x: -120px; } }
+
+/* ondinha de clique nos botões */
+.ripple { position: absolute; border-radius: 50%; pointer-events: none; background: rgba(255,255,255,.55); transform: scale(0); animation: ripple .6s ease-out forwards; }
+@keyframes ripple { to { transform: scale(2.6); opacity: 0; } }
+.wa-pill, .btn, .btn-wa, .add, .btn-outline, .see-all { position: relative; overflow: hidden; }
+
+/* estrelas das avaliações se preenchem da esquerda para a direita */
+.js .rv-card .rv-stars { clip-path: inset(0 100% 0 0); }
+.js .rv-card.in .rv-stars { animation: stars-wipe .9s .25s cubic-bezier(.2,.8,.2,1) forwards; }
+@keyframes stars-wipe { to { clip-path: inset(0 0 0 0); } }
+
+/* aspas das avaliações "caem" ao aparecer */
+.js .rv-card::before { opacity: 0; translate: 0 -14px; transition: opacity .6s .35s, translate .6s .35s cubic-bezier(.2,.9,.3,1.4); }
+.js .rv-card.in::before { opacity: 1; translate: 0 0; }
+
+/* patinha dos títulos dá um pulinho ao aparecer */
+.js .sec-head.in h2 svg { animation: paw-hop .7s .3s cubic-bezier(.3,1.6,.5,1) both; }
+@keyframes paw-hop { 0% { transform: scale(.4) rotate(-30deg); opacity: 0; } 100% { transform: scale(1) rotate(0); opacity: 1; } }
+
+/* brilho que varre os espaços de foto ao passar o mouse */
+.product-card .slot::before, .cat-card .slot::before {
+  content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(105deg, transparent 35%, rgba(255,255,255,.55) 50%, transparent 65%);
+  transform: translateX(-120%); transition: transform .8s ease;
+}
+.product-card:hover .slot::before, .cat-card:hover .slot::before { transform: translateX(120%); }
+
+/* ícones do contato reagem ao passar o mouse */
+.ct-ico { transition: background .25s, transform .25s; }
+.ct-list li:hover .ct-ico { background: rgba(255,199,44,.22); transform: scale(1.08) rotate(-4deg); }
+
+/* botão de WhatsApp chega depois da página e balança de tempos em tempos */
+@keyframes wa-in { from { opacity: 0; transform: scale(.3) translateY(20px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+@keyframes wa-shake { 0%, 88%, 100% { rotate: 0deg; } 91% { rotate: -14deg; } 94% { rotate: 12deg; } 97% { rotate: -8deg; } }
+.wa-float { animation: wa-in .6s 1.6s cubic-bezier(.3,1.5,.5,1) backwards, wa-shake 9s 4s infinite; }
+
+/* sublinhado animado nos links do rodapé */
+.footer nav a { position: relative; }
+.footer nav a::after { content: ""; position: absolute; left: 4px; right: 4px; bottom: 8px; height: 2px; background: #ffc72c; transform: scaleX(0); transform-origin: left; transition: transform .25s; }
+.footer nav a:hover::after { transform: scaleX(1); }
+
+@media (prefers-reduced-motion: reduce) {
+  .spark, .paw-track, .wa-float, .wa-float::before { animation: none !important; }
+  .js .rv-card .rv-stars { clip-path: none; animation: none !important; }
+  .js .rv-card::before { opacity: 1; translate: none; transition: none; }
+  .js .sec-head.in h2 svg { animation: none; }
+  .pets { transition: none; transform: none; }
+}
+@media (max-width: 720px) {
+  .spark.s2, .spark.s4 { display: none; }
+  .spark { bottom: 40vw; width: 7vw; }
+  .paw-band { height: 44px; }
+  @keyframes spark-up {
+    0% { opacity: 0; transform: translateY(0) rotate(-12deg); } 15% { opacity: .85; } 80% { opacity: .5; }
+    100% { opacity: 0; transform: translateY(-60vw) rotate(14deg); }
+  }
+}
