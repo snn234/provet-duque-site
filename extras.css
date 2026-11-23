@@ -102,3 +102,6 @@
     100% { opacity: 0; transform: translateY(-60vw) rotate(14deg); }
   }
 }
+
+/* com 3 categorias, o círculo não passa de um tamanho confortável */
+.cat-card .slot { width: min(66%, 230px); }
