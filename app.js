@@ -58,7 +58,7 @@
 
     // elementos das faixas "estouram" ao aparecer
     var k = 0;
-    document.querySelectorAll(".art > .sticker, .art > .burst, .art > .bag, .art > .bowl, .art > .dog-slot, .art > .dog-face").forEach(function (el) {
+    document.querySelectorAll(".art > .sticker, .art > .burst, .art > .bag, .art > .dog-slot, .art > .dog-face").forEach(function (el) {
       el.classList.add("pop");
       el.style.setProperty("--d", ((k++ % 4) * 0.12) + "s");
       io.observe(el);
